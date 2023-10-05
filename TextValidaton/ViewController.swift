@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
+    //REMEMBER!!! THE SEGUE IS ALL MESSED UP
 
     
     @IBAction func submitPressed(_ sender: Any) {
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
                 return
             }
             
-            performSegue(withIdentifier: "toLanding", sender: checkIt)
+            performSegue(withIdentifier: "LoginSegue", sender: checkIt)
             
         }
         

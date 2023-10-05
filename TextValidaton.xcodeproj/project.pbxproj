@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EACFA9632ACC696800505B5F /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACFA9622ACC696800505B5F /* UserViewController.swift */; };
 		EADAC88D2ACB091D0049704C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAC88C2ACB091D0049704C /* AppDelegate.swift */; };
 		EADAC88F2ACB091D0049704C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAC88E2ACB091D0049704C /* SceneDelegate.swift */; };
 		EADAC8912ACB091D0049704C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAC8902ACB091D0049704C /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EACFA9622ACC696800505B5F /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		EADAC8892ACB091D0049704C /* TextValidaton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextValidaton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EADAC88C2ACB091D0049704C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EADAC88E2ACB091D0049704C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				EADAC88C2ACB091D0049704C /* AppDelegate.swift */,
 				EADAC88E2ACB091D0049704C /* SceneDelegate.swift */,
+				EACFA9622ACC696800505B5F /* UserViewController.swift */,
 				EADAC8902ACB091D0049704C /* ViewController.swift */,
 				EADAC8922ACB091D0049704C /* Main.storyboard */,
 				EADAC8952ACB091E0049704C /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EADAC8912ACB091D0049704C /* ViewController.swift in Sources */,
+				EACFA9632ACC696800505B5F /* UserViewController.swift in Sources */,
 				EADAC88D2ACB091D0049704C /* AppDelegate.swift in Sources */,
 				EADAC8A12ACB258B0049704C /* userAccount].swift in Sources */,
 				EADAC88F2ACB091D0049704C /* SceneDelegate.swift in Sources */,

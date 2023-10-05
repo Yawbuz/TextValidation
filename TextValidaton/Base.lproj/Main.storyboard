@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7q8-01-wS1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -32,7 +32,7 @@
                                                 <rect key="frame" x="0.0" y="11" width="150" height="34"/>
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="150" id="MVx-dL-XbF"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="MVx-dL-XbF"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
@@ -55,7 +55,7 @@
                                                 <rect key="frame" x="0.0" y="11" width="150" height="34"/>
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="150" id="n01-21-GSW"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="n01-21-GSW"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -86,51 +86,148 @@
                         <outlet property="emailField" destination="nBZ-mY-eDv" id="yv4-yw-qOI"/>
                         <outlet property="passwordErrorLabel" destination="bEe-i6-Iyc" id="ULF-UK-Yqn"/>
                         <outlet property="passwordField" destination="MWL-0r-QUI" id="zsq-bv-4il"/>
-                        <segue destination="ZqP-UQ-g8Y" kind="show" identifier="toLanding" id="CKP-oz-qZn"/>
+                        <segue destination="4E0-1M-mhN" kind="presentation" identifier="LoginSegue" modalPresentationStyle="fullScreen" id="AQv-wI-ypV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756.48854961832058" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="619" y="-369"/>
         </scene>
-        <!--Logged in-->
-        <scene sceneID="OUY-Ln-U6M">
+        <!--User-->
+        <scene sceneID="2bK-eK-gbO">
             <objects>
-                <viewController id="ZqP-UQ-g8Y" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bk8-QP-89m">
+                <viewController title="User" id="YPM-CJ-myR" customClass="UserViewController" customModule="TextValidaton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kqe-MC-NSl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Fvo-og-cLG"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="2iI-ZB-tKY">
+                                <rect key="frame" x="0.0" y="70" width="393" height="310"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Famous-underwater-basket-weaver-Glips-McGork--brother-of-steve-buscemi-winning-the-indy-500-while-wearing-slippers" translatesAutoresizingMaskIntoConstraints="NO" id="evD-iS-iuk">
+                                        <rect key="frame" x="96.666666666666686" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="McD-xV-hsS"/>
+                                            <constraint firstAttribute="width" constant="200" id="sBd-w0-bA9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vI5-Lr-JFs">
+                                        <rect key="frame" x="160.33333333333334" y="224" width="72.333333333333343" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Plb-7M-hXu">
+                                        <rect key="frame" x="138" y="268.33333333333331" width="117" height="42.666666666666686"/>
+                                        <segments>
+                                            <segment title="profile"/>
+                                            <segment title="Posts"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="profileSwitch:" destination="YPM-CJ-myR" eventType="valueChanged" id="bb8-Mr-s13"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="310" id="AEI-gD-LVG"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ETh-J2-4cX">
+                                <rect key="frame" x="56.666666666666657" y="400" width="280" height="320"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Famous-underwater-basket-weaver-Glips-McGork--brother-of-steve-buscemi-winning-the-indy-500-while-wearing-slippers (1)" translatesAutoresizingMaskIntoConstraints="NO" id="dMP-R4-2bW">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="4Vl-xK-X57"/>
+                                            <constraint firstAttribute="height" constant="280" id="dgb-bW-vDT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="post text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IP-wf-ZXp">
+                                        <rect key="frame" x="0.0" y="290" width="280" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="0ki-13-wSw"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N2x-Im-rNn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ETh-J2-4cX" firstAttribute="top" secondItem="2iI-ZB-tKY" secondAttribute="bottom" constant="20" id="GfO-Ak-4Cw"/>
+                            <constraint firstItem="2iI-ZB-tKY" firstAttribute="trailing" secondItem="N2x-Im-rNn" secondAttribute="trailing" id="JJd-OD-yk9"/>
+                            <constraint firstItem="2iI-ZB-tKY" firstAttribute="top" secondItem="N2x-Im-rNn" secondAttribute="top" constant="70" id="Jeq-vQ-Fv8"/>
+                            <constraint firstItem="ETh-J2-4cX" firstAttribute="centerX" secondItem="Kqe-MC-NSl" secondAttribute="centerX" id="OzR-Ho-os4"/>
+                            <constraint firstItem="2iI-ZB-tKY" firstAttribute="leading" secondItem="N2x-Im-rNn" secondAttribute="leading" id="STE-Aj-w7Q"/>
+                            <constraint firstItem="2iI-ZB-tKY" firstAttribute="centerX" secondItem="Kqe-MC-NSl" secondAttribute="centerX" id="oKR-Gd-x4w"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="person" catalog="system" id="6xK-5Y-6w8"/>
+                    <navigationItem key="navigationItem" id="5yx-h5-Rtc"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="evD-iS-iuk" id="WTZ-B1-Psy"/>
+                        <outlet property="profileSegmentControl" destination="Plb-7M-hXu" id="KQ5-wF-xkB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RcB-rY-fmM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1394.6564885496182" y="-10.563380281690142"/>
+        </scene>
+        <!--Posts-->
+        <scene sceneID="6PT-SY-TPM">
+            <objects>
+                <viewController title="Posts" id="gPO-tj-xCx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cmS-SC-Y2U">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EW7-3K-Di3">
+                                <rect key="frame" x="158" y="74" width="76" height="34.333333333333343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="submit"/>
+                                <connections>
+                                    <action selector="submitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oSb-SE-0Ay"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PQP-F6-Xr8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Logged in" id="aMA-d8-fO2">
-                        <barButtonItem key="backBarButtonItem" title="Log out" id="rVb-p2-0hy"/>
-                    </navigationItem>
+                    <tabBarItem key="tabBarItem" title="Item" id="aYN-b9-JMQ"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hAw-dl-DtO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oE9-cI-XXa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646.5648854961833" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="2150.3816793893129" y="-10.563380281690142"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7GY-aG-SAf">
+        <!--Tab Bar Controller-->
+        <scene sceneID="ur7-ib-goq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7q8-01-wS1" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4E0-1M-mhN" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Ja-1U-6D4">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationItem key="navigationItem" id="WGR-ej-HbT"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RFF-RF-EIZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3FY-wY-TqC"/>
+                        <segue destination="YPM-CJ-myR" kind="relationship" relationship="viewControllers" id="Fck-Zz-Aa6"/>
+                        <segue destination="gPO-tj-xCx" kind="relationship" relationship="viewControllers" id="PWs-lH-gJk"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QaZ-7E-Flg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yUl-3L-kzH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-170.22900763358777" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="1395" y="-813"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Famous-underwater-basket-weaver-Glips-McGork--brother-of-steve-buscemi-winning-the-indy-500-while-wearing-slippers" width="2048" height="2048"/>
+        <image name="Famous-underwater-basket-weaver-Glips-McGork--brother-of-steve-buscemi-winning-the-indy-500-while-wearing-slippers (1)" width="2048" height="2048"/>
+        <image name="person" catalog="system" width="128" height="121"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
